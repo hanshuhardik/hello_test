@@ -3,5 +3,5 @@ while true
 do
     clear
     echo $(date +%T)
-    sleep 1s
+    sleep 1s 
 done
