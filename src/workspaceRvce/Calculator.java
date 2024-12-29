@@ -40,14 +40,26 @@ public class Calculator {
 //	}
 	public static void main(String args[]) {
 		double num1,num2;
-		int choice;
+		int choice=0;
 		Scanner sc=new Scanner(System.in);
 		while(true) {
+			System.out.println("0 for exit or 1 for continue");
+			int z=sc.nextInt();
+			Calculator ob=new Calculator(0,0);
+			if(z==0) {
+				sc.close();
+				System.exit(0);
+			}
+			else
+			{
+			
+			
+			
 			System.out.println("Enter your first number:");
 			num1=sc.nextDouble();
 			System.out.println("Enter your second number:");
 			num2=sc.nextDouble();
-			Calculator ob=new Calculator(num1,num2);
+			 ob=new Calculator(num1,num2);
 			System.out.println("Press 1 for Addition");
 			System.out.println("Press 2 for Subtraction");
 			System.out.println("Press 3 for Multiplication");
@@ -55,7 +67,7 @@ public class Calculator {
 			System.out.println("Press 5 for Reset");
 			System.out.println("Press 6 for Exit");
 			choice=sc.nextInt();
-			
+			}
 			switch(choice) {
 			case 1:
 				ob.add();
